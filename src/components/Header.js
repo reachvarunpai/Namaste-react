@@ -1,67 +1,47 @@
-import { useState } from "react";
+// src/components/Header.js
+import { useState, useContext } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
+  const onlineStatus = useOnlineStatus();
+  const { loggedInUser } = useContext(UserContext);
+
+  const cartItems = useSelector((store) => store.cart.items);
+
+  const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div
-      className="header"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "10px 20px",
-        backgroundColor: "#f8f8f8",
-        borderBottom: "1px solid #ddd",
-      }}
-    >
-      <div className="logo-container">
-        <img
-          className="logo"
-          src={LOGO_URL}
-          alt="app-logo"
-          style={{ height: "50px" }}
-        />
+    <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-white shadow-md border-b">
+      <div className="flex items-center gap-2 mb-4 sm:mb-0">
+        <img src={LOGO_URL} alt="App Logo" className="h-12 w-auto" />
+        <span className="text-lg font-bold text-purple-700">Namaste React</span>
       </div>
 
-      <div className="nav-items">
-        <ul
-          style={{
-            listStyle: "none",
-            display: "flex",
-            gap: "20px",
-            margin: 0,
-            padding: 0,
-            alignItems: "center",
-          }}
-        >
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li>Cart</li>
+      <nav>
+        <ul className="flex flex-wrap items-center gap-5 text-gray-800 font-medium">
+          <li>Online Status: <span>{onlineStatus ? "✅" : "🔴"}</span></li>
+          <li><Link to="/" className="hover:text-purple-600">Home</Link></li>
+          <li><Link to="/about" className="hover:text-purple-600">About</Link></li>
+          <li><Link to="/contact" className="hover:text-purple-600">Contact</Link></li>
+          <li><Link to="/grocery" className="hover:text-purple-600">Grocery</Link></li>
+          <li><Link to="/cart" className="hover:text-purple-600">Cart - ({totalCount} items)</Link></li>
+          <li className="text-purple-600 font-semibold">👤 {loggedInUser}</li>
           <li>
             <button
-              className="login"
-              onClick={() =>
-                setBtnNameReact((prev) => (prev === "Login" ? "Logout" : "Login"))
-              }
-              style={{
-                padding: "6px 12px",
-                backgroundColor: "#6200ee",
-                color: "#fff",
-                border: "none",
-                borderRadius: "4px",
-                cursor: "pointer",
-              }}
+              className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+              onClick={() => setBtnNameReact((prev) => (prev === "Login" ? "Logout" : "Login"))}
             >
               {btnNameReact}
             </button>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 
