@@ -31,3 +31,21 @@ import {component} from "path";
  - Slice(cart slice)
  - dispatch(action)
  - Selector
+
+ # types of testing(developer)
+ - Unit Testing
+ - Integration Testing
+ - End To End Testing - e2e testing
+ 
+ # Setting up testing in our app
+ - Install React Testing Library
+ - Installed Jest
+ - Installed Babel dependencies
+ - Configure Babel
+ - Configure parcel config file to disable default babel transpilation
+ - Jest Configuration
+ - Jest = npx create-jest
+ - Install jsDom Library
+ - Install @babel/preset-react - to make JSX work in testcase
+ - Include @babel/preset-react inside my babel config
+ - Install npm i -D @testing-library/jest-dom

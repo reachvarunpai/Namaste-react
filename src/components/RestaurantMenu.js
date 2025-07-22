@@ -82,12 +82,13 @@ const RestaurantMenu = () => {
                   {items.map((item) => (
                     <li
                       key={item.id}
+                      data-testid="foodItems" 
                       className="flex flex-col sm:flex-row justify-between gap-4 border-b pb-4"
                     >
                       <div className="flex-1">
                         <div className="font-semibold text-gray-900">{item.name}</div>
                         <div className="text-sm text-gray-600 mt-1">
-                          ₹{(item.price || item.defaultPrice || 0) / 100}
+                          ₹{((item?.price ?? item?.defaultPrice ?? 0) / 100).toFixed(2)}
                           {item.isVeg === 1 ? (
                             <span className="ml-2 text-green-600">🟢 Veg</span>
                           ) : (
@@ -108,6 +109,7 @@ const RestaurantMenu = () => {
                           />
                         )}
                         <button
+                          data-testid="addBtn"
                           className="bg-purple-600 text-white px-4 py-1 rounded hover:bg-purple-700 text-sm"
                           onClick={() => dispatch(addItem(item))}
                         >

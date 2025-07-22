@@ -4,12 +4,22 @@
   "description": "Namaste React by Varun Pai",
   "scripts": {
     "start": "parcel index.html --port 3000",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
   "author": "Varun Pai",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "autoprefixer": "^10.4.19",
+    "babel-jest": "^30.0.4",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
     "parcel": "^2.15.4",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1"

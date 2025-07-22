@@ -1,4 +1,3 @@
-
 import React from "react";
 import { CDN_URL } from "../utils/constant";
 
@@ -7,7 +6,10 @@ const RestaurantCard = ({ resData }) => {
     resData.info;
 
   return (
-    <div className="w-64 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
+    <div
+      data-testid="resCard" // ✅ Added for testing purposes
+      className="w-64 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+    >
       <img
         className="w-full h-40 object-cover rounded-md mb-3"
         alt="res-logo"

@@ -1,0 +1,94 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "671928",
+        "name": "KFC",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/377e9327-3ca7-48ac-b36c-96f5bf6e186a_671928.JPG",
+        "locality": "7th Block",
+        "areaName": "Koramangla",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+            "Burgers",
+            "Fast Food",
+            "Rolls & Wraps"
+        ],
+        "avgRating": 4.2,
+        "parentId": "547",
+        "avgRatingString": "4.2",
+        "totalRatingsString": "5.2K+",
+        "sla": {
+            "deliveryTime": 15,
+            "lastMileTravel": 1.2,
+            "serviceability": "SERVICEABLE",
+            "slaString": "15-20 mins",
+            "lastMileTravelString": "1.2 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-07-23 03:00:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "bolt/big%20rx%20listing%2015%20mins%20.png",
+                    "description": "bolt!"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "bolt!",
+                                "imageId": "bolt/big%20rx%20listing%2015%20mins%20.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "ITEMS",
+            "subHeader": "AT ₹159"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-6997967a-6d70-44c5-98c7-74720149eb0b"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/bangalore/kfc-7th-block-koramangla-rest671928",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}
